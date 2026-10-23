@@ -56,10 +56,10 @@
     <div class="glass-card rounded-3xl p-6 sm:p-8 shadow-xl relative overflow-hidden">
       <div class="relative z-10 flex flex-col md:flex-row items-center gap-6 text-center md:text-left">
         
-        <!-- Avatar -->
+        <!-- Avatar Chợ Bến Thành -->
         <div class="relative group">
           <div class="absolute -inset-1 bg-gradient-to-r from-red-600 to-blue-600 rounded-full blur opacity-75 group-hover:opacity-100 transition duration-300"></div>
-          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80" alt="Dương Hoàng Sơn" class="relative w-32 h-32 md:w-36 md:h-36 rounded-full object-cover border-4 border-white dark:border-slate-800 shadow-md">
+          <img src="avatar.jpg" alt="Dương Hoàng Sơn" class="relative w-32 h-32 md:w-36 md:h-36 rounded-full object-cover border-4 border-white dark:border-slate-800 shadow-md">
         </div>
 
         <div class="flex-1 space-y-3">
@@ -154,25 +154,3 @@
 
   <script>
     const themeToggleBtn = document.getElementById('themeToggle');
-    const themeIcon = document.getElementById('themeIcon');
-    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-      document.documentElement.classList.add('dark');
-      themeIcon.className = 'fas fa-sun text-yellow-400';
-    } else {
-      document.documentElement.classList.remove('dark');
-      themeIcon.className = 'fas fa-moon text-slate-600';
-    }
-    themeToggleBtn.addEventListener('click', () => {
-      if (document.documentElement.classList.contains('dark')) {
-        document.documentElement.classList.remove('dark');
-        localStorage.theme = 'light';
-        themeIcon.className = 'fas fa-moon text-slate-600';
-      } else {
-        document.documentElement.classList.add('dark');
-        localStorage.theme = 'dark';
-        themeIcon.className = 'fas fa-sun text-yellow-400';
-      }
-    });
-  </script>
-</body>
-</html>
