@@ -4,11 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dương Hoàng Sơn - Hoàng Sơn Channel</title>
-  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <script>
@@ -16,26 +13,14 @@
       darkMode: 'class',
       theme: {
         extend: {
-          fontFamily: {
-            sans: ['Inter', 'sans-serif'],
-          },
-          colors: {
-            brand: {
-              red: '#FF0000',
-              blue: '#1877F2',
-              dark: '#0F172A',
-            }
-          }
+          fontFamily: { sans: ['Inter', 'sans-serif'] }
         }
       }
     }
   </script>
 
   <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      transition: background-color 0.3s, color 0.3s;
-    }
+    body { font-family: 'Inter', sans-serif; transition: background-color 0.3s, color 0.3s; }
     .glass-card {
       background: rgba(255, 255, 255, 0.85);
       backdrop-filter: blur(12px);
@@ -46,56 +31,37 @@
       backdrop-filter: blur(12px);
       border: 1px solid rgba(255, 255, 255, 0.08);
     }
-    .btn-hover {
-      transition: all 0.2s ease-in-out;
-    }
-    .btn-hover:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 20px -4px rgba(0,0,0,0.15);
-    }
-    .btn-hover:active {
-      transform: translateY(0);
-    }
+    .btn-hover { transition: all 0.2s ease-in-out; }
+    .btn-hover:hover { transform: translateY(-2px); box-shadow: 0 8px 20px -4px rgba(0,0,0,0.15); }
   </style>
 </head>
 <body class="bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-100 min-h-screen pb-12 transition-colors duration-300">
 
-  <!-- Header / Navigation Bar -->
+  <!-- Header -->
   <header class="sticky top-0 z-50 backdrop-blur-md bg-white/70 dark:bg-slate-900/70 border-b border-slate-200 dark:border-slate-800 px-4 py-3">
     <div class="max-w-4xl mx-auto flex items-center justify-between">
-      <div class="flex items-center space-x-3">
-        <!-- Vị trí 1: Dương Hoàng Sơn -->
-        <span class="font-bold text-lg bg-gradient-to-r from-red-600 to-blue-600 bg-clip-text text-transparent">
-          Dương Hoàng Sơn
-        </span>
-      </div>
-      
-      <div class="flex items-center space-x-2">
-        <!-- Toggle Dark/Light Mode -->
-        <button id="themeToggle" class="p-2.5 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-700 transition" title="Đổi giao diện">
-          <i id="themeIcon" class="fas text-lg"></i>
-        </button>
-      </div>
+      <span class="font-bold text-lg bg-gradient-to-r from-red-600 to-blue-600 bg-clip-text text-transparent">
+        Dương Hoàng Sơn
+      </span>
+      <button id="themeToggle" class="p-2.5 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+        <i id="themeIcon" class="fas text-lg"></i>
+      </button>
     </div>
   </header>
 
-  <!-- Main Container -->
+  <!-- Main Content -->
   <main class="max-w-4xl mx-auto px-4 pt-8 space-y-8">
 
     <!-- Profile Header Card -->
     <div class="glass-card rounded-3xl p-6 sm:p-8 shadow-xl relative overflow-hidden">
-      <!-- Background Decor -->
-      <div class="absolute -top-24 -right-24 w-60 h-60 bg-red-500/10 dark:bg-red-500/20 rounded-full blur-3xl pointer-events-none"></div>
-      <div class="absolute -bottom-24 -left-24 w-60 h-60 bg-blue-500/10 dark:bg-blue-500/20 rounded-full blur-3xl pointer-events-none"></div>
-
       <div class="relative z-10 flex flex-col md:flex-row items-center gap-6 text-center md:text-left">
-        <!-- Vị trí 2: Gọi trực tiếp file avatar.jpg cùng thư mục -->
+        
+        <!-- Avatar -->
         <div class="relative group">
           <div class="absolute -inset-1 bg-gradient-to-r from-red-600 to-blue-600 rounded-full blur opacity-75 group-hover:opacity-100 transition duration-300"></div>
-          <img src="avatar.jpg" alt="Dương Hoàng Sơn" class="relative w-32 h-32 md:w-36 md:h-36 rounded-full object-cover border-4 border-white dark:border-slate-800 shadow-md">
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80" alt="Dương Hoàng Sơn" class="relative w-32 h-32 md:w-36 md:h-36 rounded-full object-cover border-4 border-white dark:border-slate-800 shadow-md">
         </div>
 
-        <!-- Info & Actions -->
         <div class="flex-1 space-y-3">
           <div>
             <h1 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white flex items-center justify-center md:justify-start gap-2">
@@ -111,121 +77,84 @@
             Chia sẻ thủ thuật công nghệ, hướng dẫn phần mềm & trải nghiệm cuộc sống. Nhấn đăng ký kênh để ủng hộ mình nhé!
           </p>
 
-          <!-- Action Buttons -->
+          <!-- Action Buttons (YouTube, Facebook, Zalo) -->
           <div class="flex flex-wrap items-center justify-center md:justify-start gap-3 pt-2">
             <!-- YouTube Subscribe -->
-            <a href="https://www.youtube.com/channel/UCP8oeUMMFNTQaddcM3g6gVw?sub_confirmation=1" target="_blank" rel="noopener noreferrer" 
-               class="btn-hover inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-semibold px-5 py-2.5 rounded-full shadow-lg shadow-red-500/25">
-              <i class="fab fa-youtube text-lg"></i>
-              <span>Đăng Ký YouTube</span>
+            <a href="https://www.youtube.com/channel/UCP8oeUMMFNTQaddcM3g6gVw?sub_confirmation=1" target="_blank" class="btn-hover inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-semibold px-5 py-2.5 rounded-full shadow-lg shadow-red-500/25">
+              <i class="fab fa-youtube text-lg"></i> <span>Đăng Ký YouTube</span>
             </a>
 
             <!-- Facebook Follow -->
-            <a href="https://www.facebook.com/dhsonit" target="_blank" rel="noopener noreferrer" 
-               class="btn-hover inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-5 py-2.5 rounded-full shadow-lg shadow-blue-500/25">
-              <i class="fab fa-facebook text-lg"></i>
-              <span>Theo Dõi Facebook</span>
+            <a href="https://www.facebook.com/dhsonit" target="_blank" class="btn-hover inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-5 py-2.5 rounded-full shadow-lg shadow-blue-500/25">
+              <i class="fab fa-facebook text-lg"></i> <span>Theo Dõi Facebook</span>
+            </a>
+
+            <!-- Zalo Add Friend / Chat -->
+            <a href="https://zalo.me/0969495254" target="_blank" class="btn-hover inline-flex items-center gap-2 bg-sky-500 hover:bg-sky-600 text-white font-semibold px-5 py-2.5 rounded-full shadow-lg shadow-sky-500/25">
+              <i class="fas fa-user-plus text-lg"></i> <span>Kết Bạn Zalo</span>
             </a>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Quick Stats Grid -->
+    <!-- Quick Links Grid -->
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-      <!-- YouTube Card -->
       <div class="glass-card p-6 rounded-2xl shadow-md border-l-4 border-red-500 flex items-center justify-between">
-        <div class="space-y-1">
-          <div class="flex items-center gap-2 text-red-600 dark:text-red-400 font-bold text-sm uppercase tracking-wider">
+        <div>
+          <div class="flex items-center gap-2 text-red-600 dark:text-red-400 font-bold text-sm uppercase">
             <i class="fab fa-youtube text-lg"></i> YouTube Channel
           </div>
           <h3 class="text-lg font-bold text-slate-800 dark:text-slate-100">Hoàng Sơn Channel</h3>
-          <p class="text-xs text-slate-500 dark:text-slate-400">Thủ thuật, Công nghệ & Mẹo hay</p>
         </div>
-        <a href="https://www.youtube.com/channel/UCP8oeUMMFNTQaddcM3g6gVw" target="_blank" class="p-3 bg-red-50 dark:bg-red-950/40 text-red-600 dark:text-red-400 rounded-xl hover:bg-red-100 dark:hover:bg-red-900/50 transition">
+        <a href="https://www.youtube.com/channel/UCP8oeUMMFNTQaddcM3g6gVw" target="_blank" class="p-3 bg-red-50 dark:bg-red-950/40 text-red-600 rounded-xl">
           <i class="fas fa-external-link-alt"></i>
         </a>
       </div>
 
-      <!-- Facebook Card -->
       <div class="glass-card p-6 rounded-2xl shadow-md border-l-4 border-blue-500 flex items-center justify-between">
-        <div class="space-y-1">
-          <div class="flex items-center gap-2 text-blue-600 dark:text-blue-400 font-bold text-sm uppercase tracking-wider">
+        <div>
+          <div class="flex items-center gap-2 text-blue-600 dark:text-blue-400 font-bold text-sm uppercase">
             <i class="fab fa-facebook text-lg"></i> Facebook Profile
           </div>
           <h3 class="text-lg font-bold text-slate-800 dark:text-slate-100">Dương Hoàng Sơn</h3>
-          <p class="text-xs text-slate-500 dark:text-slate-400">Kết nối & Cập nhật bài viết mới</p>
         </div>
-        <a href="https://www.facebook.com/dhsonit" target="_blank" class="p-3 bg-blue-50 dark:bg-blue-950/40 text-blue-600 dark:text-blue-400 rounded-xl hover:bg-blue-100 dark:hover:bg-blue-900/50 transition">
+        <a href="https://www.facebook.com/dhsonit" target="_blank" class="p-3 bg-blue-50 dark:bg-blue-950/40 text-blue-600 rounded-xl">
           <i class="fas fa-external-link-alt"></i>
         </a>
       </div>
     </div>
 
-    <!-- Featured Videos Section -->
+    <!-- Featured Videos -->
     <div class="space-y-4">
-      <div class="flex items-center justify-between">
-        <h2 class="text-xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
-          <i class="fas fa-fire text-red-500"></i> Video Nổi Bật
-        </h2>
-        <a href="https://www.youtube.com/channel/UCP8oeUMMFNTQaddcM3g6gVw" target="_blank" class="text-xs font-semibold text-red-600 dark:text-red-400 hover:underline flex items-center gap-1">
-          Xem tất cả <i class="fas fa-chevron-right text-[10px]"></i>
-        </a>
-      </div>
-
+      <h2 class="text-xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
+        <i class="fas fa-fire text-red-500"></i> Video Nổi Bật
+      </h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        
-        <!-- Video 1 -->
-        <div class="glass-card rounded-2xl overflow-hidden shadow-lg flex flex-col justify-between group">
-          <div class="relative aspect-video bg-black">
-            <iframe class="w-full h-full" src="https://www.youtube.com/embed/hkI77Sws6Ao" title="Nâng Cấp Lên Youtube Premium Miễn Phí Mới Nhất" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div class="glass-card rounded-2xl overflow-hidden shadow-lg">
+          <div class="aspect-video bg-black">
+            <iframe class="w-full h-full" src="https://www.youtube.com/embed/hkI77Sws6Ao" allowfullscreen></iframe>
           </div>
-          <div class="p-4 space-y-2 flex-1 flex flex-col justify-between">
-            <div>
-              <h3 class="font-bold text-slate-800 dark:text-slate-100 line-clamp-2 hover:text-red-600 dark:hover:text-red-400 transition">
-                Nâng Cấp Lên Youtube Premium Miễn Phí Mới Nhất. Hướng dẫn cài đặt ứng dụng youtube premium free.
-              </h3>
-            </div>
-            <div class="pt-2 flex items-center justify-between text-xs text-slate-500 dark:text-slate-400 border-t border-slate-100 dark:border-slate-800">
-              <span class="flex items-center gap-1"><i class="fab fa-youtube text-red-500"></i> Hoàng Sơn Channel</span>
-              <a href="https://youtu.be/hkI77Sws6Ao" target="_blank" class="text-red-600 dark:text-red-400 font-medium hover:underline">Xem trên YT</a>
-            </div>
-          </div>
+          <div class="p-4 font-bold text-slate-800 dark:text-slate-100">Nâng Cấp Lên Youtube Premium Miễn Phí Mới Nhất</div>
         </div>
-
-        <!-- Video 2 -->
-        <div class="glass-card rounded-2xl overflow-hidden shadow-lg flex flex-col justify-between group">
-          <div class="relative aspect-video bg-black">
-            <iframe class="w-full h-full" src="https://www.youtube.com/embed/WuAri_LqUhs" title="Nâng Cấp Dung Lượng Google Photo Miễn Phí Mới Nhất" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div class="glass-card rounded-2xl overflow-hidden shadow-lg">
+          <div class="aspect-video bg-black">
+            <iframe class="w-full h-full" src="https://www.youtube.com/embed/WuAri_LqUhs" allowfullscreen></iframe>
           </div>
-          <div class="p-4 space-y-2 flex-1 flex flex-col justify-between">
-            <div>
-              <h3 class="font-bold text-slate-800 dark:text-slate-100 line-clamp-2 hover:text-red-600 dark:hover:text-red-400 transition">
-                Nâng Cấp Dung Lượng Google Photo Miễn Phí Mới Nhất
-              </h3>
-            </div>
-            <div class="pt-2 flex items-center justify-between text-xs text-slate-500 dark:text-slate-400 border-t border-slate-100 dark:border-slate-800">
-              <span class="flex items-center gap-1"><i class="fab fa-youtube text-red-500"></i> Hoàng Sơn Channel</span>
-              <a href="https://youtu.be/WuAri_LqUhs" target="_blank" class="text-red-600 dark:text-red-400 font-medium hover:underline">Xem trên YT</a>
-            </div>
-          </div>
+          <div class="p-4 font-bold text-slate-800 dark:text-slate-100">Nâng Cấp Dung Lượng Google Photo Miễn Phí Mới Nhất</div>
         </div>
-
       </div>
     </div>
 
   </main>
 
-  <!-- Footer -->
-  <footer class="max-w-4xl mx-auto text-center pt-12 pb-6 text-xs text-slate-500 dark:text-slate-400">
+  <footer class="text-center py-6 text-xs text-slate-500">
     <p>© 2026 Dương Hoàng Sơn - All rights reserved.</p>
   </footer>
 
-  <!-- Theme Toggle Script -->
   <script>
     const themeToggleBtn = document.getElementById('themeToggle');
     const themeIcon = document.getElementById('themeIcon');
-
     if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
       document.documentElement.classList.add('dark');
       themeIcon.className = 'fas fa-sun text-yellow-400';
@@ -233,7 +162,6 @@
       document.documentElement.classList.remove('dark');
       themeIcon.className = 'fas fa-moon text-slate-600';
     }
-
     themeToggleBtn.addEventListener('click', () => {
       if (document.documentElement.classList.contains('dark')) {
         document.documentElement.classList.remove('dark');
